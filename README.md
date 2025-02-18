@@ -117,20 +117,24 @@ Imagine you need to process a batch of monthly financial reports stored in Googl
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-org/js-autoagent.git
-   cd js-autoagent
+   git clone https://github.com/anmolsureka30/AutoBiz-AI.git
+   cd AutoBiz-AI
 
-2. Install dependencies 
-npm  install
+2. Install dependencies
+   ```bash
+    npm  install
+
 
 3. Set Up Environment Variables:
+   ```bash
 
    cp .env.example .env
-# Edit .env with your GEMINI_API_KEY, GOOGLE_DRIVE_CLIENT_ID, and GOOGLE_DRIVE_CLIENT_SECRET
+   # Edit .env with your GEMINI_API_KEY, GOOGLE_DRIVE_CLIENT_ID, and GOOGLE_DRIVE_CLIENT_SECRET
 
 
 4 . Start the Development Server:
-npm run dev
+    
+    npm run dev
 
 
 
