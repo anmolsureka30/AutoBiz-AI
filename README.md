@@ -1,6 +1,6 @@
 This complete README.md file provides a concise, human‑friendly explanation of the platform’s technology, workflow, and agent roles, along with instructions on how to get started and deploy the system.
 
-# AutoBiz-AI (JS-AutoAgent)
+# AutoBiz-AI (JS-AutoAgent)   Project By ANMOL SUREKA 
 
 AutoBiz-AI is an enterprise‑grade platform that automates document processing and business workflows—all directly within your web browser. Think of it as a digital team of smart assistants that read, analyze, and act on your documents using advanced AI techniques—without the need for heavy backend infrastructure.
 
@@ -146,3 +146,7 @@ Due to some unavoidable last minute issue , this may not compile . please consid
 
 <img width="1470" alt="Screenshot 2025-02-18 at 11 52 26 PM" src="https://github.com/user-attachments/assets/e39f62b4-f9ff-4d9d-af75-e131c815eb9a" />
 <img width="1470" alt="Screenshot 2025-02-18 at 11 52 16 PM" src="https://github.com/user-attachments/assets/5c679e35-0776-4a0c-9dfe-f857864f69f8" />
+
+
+Contact : 9479689897
+24b2470@iitb.ac.in
