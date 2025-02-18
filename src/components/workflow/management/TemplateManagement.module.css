@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: white;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+} 

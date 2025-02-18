@@ -1,0 +1,123 @@
+import { WorkflowTemplate } from '../template-types';
+
+export const dataExtractionTemplate: WorkflowTemplate = {
+  id: 'data-extraction-workflow',
+  name: 'Structured Data Extraction',
+  description: 'Extract structured data from documents including tables, forms, and key-value pairs',
+  version: '1.0.0',
+  steps: [
+    {
+      templateId: 'document-preprocessing',
+      name: 'Document Preprocessing',
+      type: 'document_analysis',
+      dependencies: [],
+      description: 'Prepare document for extraction',
+      parameters: ['documentId'],
+      config: {
+        deskew: true,
+        denoise: true,
+        enhanceResolution: true,
+      },
+    },
+    {
+      templateId: 'layout-analysis',
+      name: 'Layout Analysis',
+      type: 'document_analysis',
+      dependencies: ['document-preprocessing'],
+      description: 'Analyze document layout and structure',
+      config: {
+        detectTables: true,
+        detectForms: true,
+        detectLists: true,
+      },
+    },
+    {
+      templateId: 'table-extraction',
+      name: 'Table Extraction',
+      type: 'table_extraction',
+      dependencies: ['layout-analysis'],
+      description: 'Extract tabular data',
+      parameters: ['tableConfig'],
+      config: {
+        headerDetection: true,
+        cellMergeDetection: true,
+        dataValidation: true,
+      },
+    },
+    {
+      templateId: 'form-extraction',
+      name: 'Form Field Extraction',
+      type: 'entity_extraction',
+      dependencies: ['layout-analysis'],
+      description: 'Extract form fields and values',
+      parameters: ['formConfig'],
+      config: {
+        extractCheckboxes: true,
+        extractSignatures: true,
+        labelMatching: true,
+      },
+    },
+    {
+      templateId: 'data-validation',
+      name: 'Data Validation',
+      type: 'document_analysis',
+      dependencies: ['table-extraction', 'form-extraction'],
+      description: 'Validate extracted data',
+      parameters: ['validationRules'],
+      config: {
+        validateTypes: true,
+        validateRanges: true,
+        validateRequired: true,
+      },
+    },
+  ],
+  parameters: [
+    {
+      id: 'documentId',
+      name: 'Document ID',
+      type: 'string',
+      description: 'ID of the document to process',
+      required: true,
+    },
+    {
+      id: 'tableConfig',
+      name: 'Table Configuration',
+      type: 'object',
+      description: 'Configuration for table extraction',
+      required: false,
+      defaultValue: {
+        headerDetection: true,
+        cellMergeDetection: true,
+      },
+    },
+    {
+      id: 'formConfig',
+      name: 'Form Configuration',
+      type: 'object',
+      description: 'Configuration for form field extraction',
+      required: false,
+      defaultValue: {
+        extractCheckboxes: true,
+        extractSignatures: true,
+      },
+    },
+    {
+      id: 'validationRules',
+      name: 'Validation Rules',
+      type: 'array',
+      description: 'Rules for data validation',
+      required: false,
+      defaultValue: [],
+    },
+  ],
+  metadata: {
+    created: new Date('2024-01-01'),
+    lastModified: new Date('2024-01-01'),
+    author: 'system',
+    category: ['data-extraction', 'document-processing'],
+    tags: ['extraction', 'tables', 'forms', 'validation'],
+    usageCount: 0,
+    averageExecutionTime: 0,
+    successRate: 0,
+  },
+}; 

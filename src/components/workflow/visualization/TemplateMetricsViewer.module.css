@@ -1,0 +1,114 @@
+.container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.metric label {
+  font-size: 12px;
+  color: #666;
+}
+
+.metric span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.stepMetrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.stepMetric {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #e0e0e0;
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.stepHeader h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.stepType {
+  font-size: 12px;
+  padding: 2px 6px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  color: #666;
+}
+
+.stepStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat label {
+  font-size: 11px;
+  color: #666;
+}
+
+.stat span {
+  font-size: 14px;
+  color: #333;
+}
+
+.excellent {
+  color: #2e7d32 !important;
+}
+
+.good {
+  color: #1976d2 !important;
+}
+
+.fair {
+  color: #ed6c02 !important;
+}
+
+.poor {
+  color: #d32f2f !important;
+} 

@@ -1,0 +1,13 @@
+[package]
+profile = "release"
+target = "web"
+scope = "text-processing"
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O4"] 

@@ -1,0 +1,21 @@
+.edge path {
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.edge .animated {
+  stroke-dasharray: 5;
+  animation: dash 1s linear infinite;
+}
+
+.label {
+  font-size: 12px;
+  fill: #666;
+  pointer-events: none;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -10;
+  }
+} 

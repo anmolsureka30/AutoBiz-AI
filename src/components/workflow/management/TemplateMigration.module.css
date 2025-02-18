@@ -1,0 +1,160 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currentVersion {
+  font-size: 14px;
+  color: #666;
+}
+
+.currentVersion span {
+  font-weight: 500;
+  color: #2196F3;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.migrationForm {
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.formGroup select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.migrateButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.migrateButton:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.summary {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 24px;
+}
+
+.summaryContent {
+  margin-top: 16px;
+}
+
+.versions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.version {
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+}
+
+.arrow {
+  color: #2196F3;
+}
+
+.changes {
+  margin-bottom: 24px;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.changeType {
+  font-size: 12px;
+  padding: 2px 6px;
+  background-color: #E3F2FD;
+  color: #1976D2;
+  border-radius: 12px;
+}
+
+.field {
+  font-family: monospace;
+  font-size: 14px;
+  color: #666;
+}
+
+.action {
+  font-size: 12px;
+  padding: 2px 6px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+}
+
+.errors {
+  background-color: #FFEBEE;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.errorDetails {
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+} 
